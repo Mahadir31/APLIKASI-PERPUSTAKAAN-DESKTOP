@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{208703CA-88FD-4193-B490-4FD214B1B516}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>LIBRARY.My.MyApplication</StartupObject>
+    <RootNamespace>LIBRARY</RootNamespace>
+    <AssemblyName>LIBRARY</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LIBRARY.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LIBRARY.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>orange-book-5000.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Aplikasi\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anggota\FormAnggota.Designer.vb">
+      <DependentUpon>FormAnggota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Anggota\FormAnggota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anggota\FormBuatAkun.Designer.vb">
+      <DependentUpon>FormBuatAkun.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Anggota\FormBuatAkun.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buku\FormBuku.Designer.vb">
+      <DependentUpon>FormBuku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Buku\FormBuku.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buku\FormDaftarBuku.Designer.vb">
+      <DependentUpon>FormDaftarBuku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Buku\FormDaftarBuku.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Petugas\FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Petugas\FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLpPeminjaman.Designer.vb">
+      <DependentUpon>FormLpPeminjaman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLpPeminjaman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLpPengembalian.Designer.vb">
+      <DependentUpon>FormLpPengembalian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLpPengembalian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="File\FormMenuUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="File\FormMenuUtama.Designer.vb">
+      <DependentUpon>FormMenuUtama.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FormPeminjaman.Designer.vb">
+      <DependentUpon>FormPeminjaman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FormPeminjaman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Petugas\FormPetugas.Designer.vb">
+      <DependentUpon>FormPetugas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Petugas\FormPetugas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anggota\LoginAnggota.Designer.vb">
+      <DependentUpon>LoginAnggota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Anggota\LoginAnggota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LpPngembalia.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LpPngembalia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\LaporanPeminjaman.Designer.vb">
+      <DependentUpon>LaporanPeminjaman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\LaporanPeminjaman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\LaporanPengembalian.Designer.vb">
+      <DependentUpon>LaporanPengembalian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\LaporanPengembalian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LpPeminjaman.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LpPeminjaman.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\Anggota.vb" />
+    <Compile Include="Models\Buku.vb" />
+    <Compile Include="Models\MdiParent.vb" />
+    <Compile Include="Models\Peminjaman.vb" />
+    <Compile Include="Models\Pengembalian.vb" />
+    <Compile Include="Models\Petugas.vb" />
+    <Compile Include="Koneksi\ModuleKoneksi.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Transaksi\FormPengembalian.Designer.vb">
+      <DependentUpon>FormPengembalian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FormPengembalian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="File\SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="File\SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Anggota\FormAnggota.resx">
+      <DependentUpon>FormAnggota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anggota\FormBuatAkun.resx">
+      <DependentUpon>FormBuatAkun.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buku\FormBuku.resx">
+      <DependentUpon>FormBuku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buku\FormDaftarBuku.resx">
+      <DependentUpon>FormDaftarBuku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petugas\FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLpPeminjaman.resx">
+      <DependentUpon>FormLpPeminjaman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLpPengembalian.resx">
+      <DependentUpon>FormLpPengembalian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File\FormMenuUtama.resx">
+      <DependentUpon>FormMenuUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FormPeminjaman.resx">
+      <DependentUpon>FormPeminjaman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petugas\FormPetugas.resx">
+      <DependentUpon>FormPetugas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anggota\LoginAnggota.resx">
+      <DependentUpon>LoginAnggota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LpPngembalia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LpPngembalia.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\LaporanPeminjaman.resx">
+      <DependentUpon>LaporanPeminjaman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\LaporanPengembalian.resx">
+      <DependentUpon>LaporanPengembalian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LpPeminjaman.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LpPeminjaman.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FormPengembalian.resx">
+      <DependentUpon>FormPengembalian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File\SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\list-6220 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-mac-folder-13646.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet-and-coin-8722.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf-download-2620.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-and-studen-logo-free-vector-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO-UNU-NTB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-6448.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opened-book-3160.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-5003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db_perpustakaan.sql" />
+    <Content Include="orange-book-5000.ico" />
+    <None Include="Resources\hidden.png" />
+    <None Include="Resources\eye-close-up.png" />
+    <None Include="Resources\opened-book-31601.png" />
+    <None Include="Resources\book-50031.png" />
+    <None Include="Resources\8617-open-book.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
